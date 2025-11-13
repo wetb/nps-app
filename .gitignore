@@ -1,0 +1,44 @@
+# .NET Core
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio
+.vs/
+.DS_Store
+
+# Dependencies
+node_modules/
+dist/
+
+# Angular
+.angular/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store
