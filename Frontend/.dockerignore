@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+npm-debug.log
+
+# Angular
+.angular/
+dist/
+tmp/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Tests
+coverage/
+*.spec.ts
+
+# Documentation
+*.md

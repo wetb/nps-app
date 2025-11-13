@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "abuosoUdFYk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\wetb9\\OneDrive\\Documentos\\prueba\\NPSApps\\Backend\\HashPasswords\\HashPasswords.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wetb9\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

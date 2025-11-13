@@ -1,0 +1,72 @@
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <h1>Dashboard NPS</h1>
+    <div class="user-actions">
+      <span class="username">Admin</span>
+      <button class="btn btn-outline" (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <div class="dashboard-content">
+    <div *ngIf="error" class="alert alert-danger">
+      {{ error }}
+    </div>
+
+    <div *ngIf="isLoading" class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Cargando datos...</p>
+    </div>
+
+    <div *ngIf="!isLoading && npsData" class="dashboard-grid">
+      <div class="card summary-card">
+        <h3>Resumen NPS</h3>
+        <div class="nps-score">
+          <span class="score-value">{{ npsData.npsScore | number:'1.0-0' }}</span>
+          <span class="score-label">NPS Score</span>
+        </div>
+        <div class="nps-category" [ngClass]="npsData.npsCategory.toLowerCase()">
+          {{ npsData.npsCategory }}
+        </div>
+        <div class="total-votes">
+          Total de votos: {{ npsData.totalVotes }}
+        </div>
+      </div>
+
+      <div class="card distribution-card">
+        <h3>Distribución</h3>
+        <div class="distribution-grid">
+          <div class="distribution-item promoters">
+            <div class="percentage">{{ npsData.promotersPercentage | number:'1.0-0' }}%</div>
+            <div class="count">{{ npsData.promoters }} votos</div>
+            <div class="label">Promotores</div>
+          </div>
+          <div class="distribution-item neutrals">
+            <div class="percentage">{{ npsData.neutralsPercentage | number:'1.0-0' }}%</div>
+            <div class="count">{{ npsData.neutrals }} votos</div>
+            <div class="label">Neutrales</div>
+          </div>
+          <div class="distribution-item detractors">
+            <div class="percentage">{{ npsData.detractorsPercentage | number:'1.0-0' }}%</div>
+            <div class="count">{{ npsData.detractors }} votos</div>
+            <div class="label">Detractores</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card chart-card">
+        <h3>Gráfico NPS</h3>
+        <app-nps-chart [npsData]="npsData"></app-nps-chart>
+      </div>
+    </div>
+
+    <div *ngIf="!isLoading && !npsData?.totalVotes" class="no-data">
+      <p>No hay datos disponibles. Aún no se han registrado votos.</p>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" (click)="refresh()">
+        Actualizar Datos
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+out/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+.vscode/
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+!README.md
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Others
+*.pidb
+*.svclog
+*.scc
